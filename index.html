@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styleSheet.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,300&family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+        <div id="currentDate">currentDate</div>
+    </header>
+    <main>
+        <section>
+            <div class="weatherGrid">
+               <!-- search bar-->
+                <div class="searchBar">
+                    <form action="" class="form">
+                        <label for="">Search City:</label>
+                        <input type="text">
+                        <button class="formBtn">Toronto</button>
+                        <button class="formBtn">Alberta</button>
+                        <button class="formBtn">Montreal</button>
+                        <button class="formBtn">Qubeck</button>
+                        <button class="formBtn">Edminton</button>
+                        <button class="formBtn">New York</button>
+                        <button class="formBtn">Amstadam</button>
+                        <button class="formBtn">London</button>
+                    </form>
+                </div>
+               <!-- weather gagets-->
+                <div class="weatherGadget">
+                    <h2 id="currentHeader">Barrie</h2>
+                    <div class="container">
+                        <h3>Tempreature</h3>
+                        <div id="tempreature">96</div>
+                    </div>
+                    <div class="container">
+                        <h3>Humidity</h3>
+                        <div id="humidity">43%</div>
+                    </div>
+                    <div class="container">
+                        <h3>Wind Speed</h3>
+                        <div id="windSpeed">20 mph</div>
+                    </div>
+                    <div class="container">
+                        <h3>UV Indext</h3>
+                        <div id="uv">32</div>
+                    </div>
+                </div>
+                <div class="forcast">
+                    <div>
+                        <h4 id="forcastDate__one">Jan 15 2021</h4>
+                        <svg id="forcastIcon__one" class="weatherIcon"></svg>
+                        <div id="forcarstTempature__one">Tempreature</div>
+                        <div id="forcastHumidity__one">Humidity</div>
+                        <div id="forcastHumidity__one" class="index">43</div>
+                    </div>
+                    <div>
+                        <h4 id="forcastDate__two">Jan 16 2021</h4>
+                        <svg id="forcastIcon__two"class="weatherIcon"></svg>
+                        <div id="forcarstTempature__two">Tempreature</div>
+                        <div id="forcastHumidity__two">Humidity</div>
+                        <div id="forcastHumidity__two"class="index">23</div>
+                    </div>
+                    <div>
+                        <h4 id="forcastDate__three">Jan 17 2021</h4>
+                        <svg id="forcastIcon__three"class="weatherIcon"></svg>
+                        <div id="forcastTempreature__three">Tempreature</div>
+                        <div id="forcastHumidity__three">Humidity</div>
+                        <div id="forcastIndex__three" class="index">10</div>
+                    </div>
+                    <div>
+                        <h4 id="forcastDate__four">Jan 18 2021</h4>
+                        <svg id="forcastIcon__four"class="weatherIcon"></svg>
+                        <div id="forcastTempature__four">Tempreature</div>
+                        <div id="forcastHimidity__four">Humidity</div>
+                        <div id="forcasIndex__four" class="index">25</div>
+                    </div>
+                    <div>
+                        <h4 id="forcastDate__five">Jan 19 2021</h4>
+                        <svg id="forcastIcon__five" class="weatherIcon"</svg>
+                        <div id="forcastTempature__five">Tempreature</div>
+                        <div id="forcastHumidity__five">Humidity</div>
+                        <div id="forcastIndex__five"class="index">37</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h4>Design By DS</h4>
+    </footer>
+    
+</body>
+</html>

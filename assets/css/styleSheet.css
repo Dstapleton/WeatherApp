@@ -1,0 +1,137 @@
+* {
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+}
+body {
+    font-family:'Open sans', sans-serif ;
+}
+/**/
+header, footer {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    text-align:center;
+}
+header h1 {
+    width:100%;
+}
+
+/* grid setup*/
+.weatherGrid {
+    display:grid;
+    grid-template-columns:auto auto;
+    grid-template-rows:auto auto ;
+    grid-gap:10px;
+    background-color: #bdf2ff;
+    padding:10px;
+}
+.weatherGrid > div {
+    text-align:center;
+}
+
+/**/
+.searchBar {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border-radius:10px;
+    background-color: rgb(53, 124, 114);
+}
+
+.form {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:5px;
+}
+.form label {
+    padding:10px;
+    color: #bdf2ff;
+}
+.form input {
+    padding:10px;
+    margin:5px 5px;
+}
+.formBtn {
+    font-size:1.2rem;
+    height:3rem;
+    margin:5px;
+    border-radius:5px;
+    outline:none;
+}
+
+
+
+/**/
+.weatherGadget {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    padding-bottom:20px;
+}
+
+.weatherGadget h2 {
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
+}
+
+.weatherGadget .container {
+    width:20%;
+}
+
+.container h3 {
+    text-align:center;
+    padding:5px;
+    background-color: aliceblue;
+    border-radius:8px;
+}
+
+.container > div {
+    height:5rem;
+    margin-top: 10px;
+    padding:10px;
+    background-color: rgb(121, 162, 198);
+    font-size: 2rem;
+    border-radius:10px;
+}
+
+/**/
+.forcast {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+}
+.weatherIcon {
+    width:100%;
+}
+.forcast > div {
+    width:19%;
+    height:100%;
+    padding:10px 0 10px 0;
+    border-radius:8px;
+    position:relative;
+    background-color: rgb(135, 182, 167);    
+}
+.forcast div > div{
+    margin:5px 0 5px 0;
+}
+
+.index {
+    width:100%;
+    padding:8px;
+    position:absolute;
+    background-color: aquamarine;
+}
+.alert {
+    background-color: crimson;
+}
+.cartion {
+    background-color: darkorange;
+}
+.fair {
+    background-color:greenyellow;
+}
