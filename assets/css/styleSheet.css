@@ -31,6 +31,20 @@ header h1 {
 }
 
 /**/
+.search_container {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.searchBtn {
+    width:70px;
+    height:39px;
+    margin:0 10px;
+    border-radius:8px;
+    text-align:center;
+    padding:9px;
+    background-color: aquamarine;
+}
 .searchBar {
     grid-column-start: 1;
     grid-column-end: 2;
