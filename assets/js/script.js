@@ -4,12 +4,6 @@ var weathre_Icons = {
 }
 var getWeather = function (city) {
 
-    // coustom variables
-    var cap = ",";
-    var stg1 = city;
-   // var stg2 = region
-    //var currentQuery = stg1.concat(cap,stg2);
-
 
     // Weather API sample javascript code
     // Requires: jQuery and crypto-js (v3.1.9)
@@ -22,7 +16,7 @@ var getWeather = function (city) {
     var consumer_key = 'dj0yJmk9N3ZuUUh0d2FUZENPJmQ9WVdrOVFUZHBWa2MyTW5BbWNHbzlNQT09JnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PWUx';
     var consumer_secret = 'c98e7b798e8a34bfee129f9ec173f80a76ec0f26';
     var concat = '&';
-    var query = {'location': stg1,'format': 'json','u':'c'};
+    var query = {'location': city,'format': 'json','u':'c'};
     var oauth = {
         'oauth_consumer_key': consumer_key,
         'oauth_nonce': Math.random().toString(36).substring(2),
@@ -60,9 +54,9 @@ var getWeather = function (city) {
     method: 'GET',
     success: function(data){
             console.log(data);
-            var current_date = document.getElementById("currentDate");
-            var date_ = new Date();
-            current_date.innerText = date_.toDateString();
+            var date_ = document.querySelector("#currentDate");
+            var search_date = new Date();
+            date_.innerText = search_date.toDateString();
 
             var current_city = document.getElementById("currentHeader");
             current_city.innerText = data.location.city;
@@ -117,6 +111,15 @@ var weatherIcon = function (weatherData,index,tag){
    var source__ = "../assets/images/"+ data__ + ".png";
    tag.src = source__;
 }
+var presistance = function () {
+    if (localStorage.search){
+      var previous_search = localStorage.getItem("search");
+      getWeather(previous_search)
+    }else{
+         getWeather("barrie,on")
+    }
+   
+}
 
 var weatherSearch = function () {
     var search_input = document.querySelector('#weather_search');
@@ -124,31 +127,23 @@ var weatherSearch = function () {
     var current_header = document.querySelector('#currentHeader');
     
     search_btn.addEventListener('click',(event) =>{
+       
           event.preventDefault();
-          var city_search = "";
-        if ( localStorage.getItem('search',city_search) ){
-           
-          }
-        else if (search_input.value === ""){
+        if (search_input.value === ""){
             current_header.innerText = "Search field is empty";
         }
         else {
-            city_search = search_input.value;
-            localStorage.setItem('search',city_search);
-            getWeather(city_search);
-            search_input.value = ""; 
-           
+            var city_serch = search_input.value;
+            getWeather(city_serch)
+            localStorage.setItem("search",city_serch);
+            search_input.value = "";
         }
     });
-
-    
 }
+
 var current_city = document.getElementById("currentHeader");
-current_city.innerText;
 
-
-
-document.querySelector('.form').addEventListener('enter',(event)=>{
+document.querySelector('.form').addEventListener('click',(event)=>{
     event.preventDefault();
 });
 
@@ -188,6 +183,7 @@ document.getElementById('lon').onclick = (event) => {
     else{ getWeather('london,uk') }
 };
 
-
-getWeather('Barrie,on');
+presistance();
 weatherSearch();
+
+
